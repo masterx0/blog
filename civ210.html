@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>SPI概述 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="cp76bu.html" />
+    
     
 
     </head>
@@ -85,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -222,7 +224,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="civ210.html">
+        <li class="chapter active" data-level="1.3.1" data-path="civ210.html">
             
                 <a href="civ210.html">
             
@@ -587,7 +589,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >SPI概述</a>
     </h1>
 </div>
 
@@ -602,8 +604,77 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lark2gitbook">Lark2Gitbook</h1>
-<h2 id="&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;">&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;</h2>
+                                <h1 id="spi&#x6982;&#x8FF0;">SPI&#x6982;&#x8FF0;</h1>
+<p>SPI &#x5C31;&#x662F;(Service Provider Interface)&#xFF0C;&#x5B57;&#x9762;&#x610F;&#x601D;&#x5C31;&#x662F;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x63A5;&#x53E3;&#xFF0C;&#x4ED6;&#x7684;&#x7528;&#x6CD5;&#x5176;&#x5B9E;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x5728;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x8005;&#x8DDF;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x4E4B;&#x95F4;&#x5546;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF1A;</p>
+<ol>
+<li>&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x8005;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x8981;&#x5B9E;&#x73B0;&#x4E4B;&#x524D;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x5728; classpath &#x91CC;&#x7684; META-INF/services &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x662F;&#x4E4B;&#x524D;&#x7684;&#x63A5;&#x53E3;&#x7684;&#x5168;&#x7C7B;&#x540D;&#xFF0C;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x662F;&#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x5168;&#x7C7B;&#x540D;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x8005;&#x4FDD;&#x8BC1;&#x4F1A;&#x901A;&#x8FC7; ServiceLoader &#x5728;&#x7C7B;&#x8DEF;&#x5F84;&#x5185;&#x7684;&#x6240;&#x6709;jar&#x5305;&#x4E2D;&#x641C;&#x7D22;&#x6307;&#x5B9A;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x8FDB;&#x884C;&#x5B9E;&#x4F8B;&#x5316;&#x3002;
+&#x663E;&#x7136;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BB2;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x8005;&#x4E00;&#x822C;&#x5C31;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x6784;&#x9020;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x9759;&#x6001;&#x5DE5;&#x5382;&#x65B9;&#x5F0F;&#x5C01;&#x88C5;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</li>
+</ol>
+<hr>
+<h2 id="&#x4F8B;&#x5B50;"><a name="&#x4F8B;&#x5B50;"></a>&#x4F8B;&#x5B50;</h2>
+<p>&#x4E3E;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;Ispi.java:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.mythsman.test;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Ispi</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">say</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x7684;&#x662F;&#x6700;&#x7EC8;&#x80FD;&#x591F;&#x5728;&#x573A;&#x666F;&#x7C7B;&#x4E2D;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8C03;&#x7528;Test.java:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.mythsman.test;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        Ispi ispi = SpiFactory.getSpi();
+        ispi.say();
+    }
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x7C7B;SpiImpl.java:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.mythsman.test;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpiImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Ispi</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">say</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Hey , I&apos;m an implement&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x521B;&#x5EFA;resources/META-INF/services&#x6587;&#x4EF6;&#x5939;(resources&#x6587;&#x4EF6;&#x5939;&#x5DF2;&#x5199;&#x5165;&#x7C7B;&#x8DEF;&#x5F84;)&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x5199;&#x5165;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x4E3A;<code>com.mythsman.test.Ispi</code>&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;<code>com.mythsman.test.SpiImpl</code>&#xFF0C;&#x7528;&#x4EE5;&#x6CE8;&#x518C;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x4E0A;&#x9762;&#x8FD9;&#x4E24;&#x6B65;&#x65E2;&#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6253;&#x5305;&#x540E;&#x5C06;jar&#x5305;&#x653E;&#x5165;&#x7C7B;&#x8DEF;&#x5F84;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#x6765;&#x5199;&#x5DE5;&#x5382;SpiFactory.java:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.mythsman.test;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.ServiceLoader;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpiFactory</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Ispi <span class="hljs-title">getSpi</span><span class="hljs-params">()</span> </span>{
+        ServiceLoader&lt;Ispi&gt; loader = ServiceLoader.load(Ispi.class);
+        List&lt;Ispi&gt; ispiList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span> (Ispi ispi : loader) {
+            ispiList.add(ispi);
+        }
+        <span class="hljs-keyword">if</span> (ispiList.size() &gt; <span class="hljs-number">2</span>) {
+            System.err.println(<span class="hljs-string">&quot;Mutiple implements found.&quot;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SubstituteSpi();
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ispiList.size() &lt; <span class="hljs-number">1</span>) {
+            System.err.println(<span class="hljs-string">&quot;No implements found.&quot;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SubstituteSpi();
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> ispiList.get(<span class="hljs-number">0</span>);
+        }
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;ServiceLoader&#x4F1A;&#x53BB;&#x7C7B;&#x8DEF;&#x5F84;&#x4E2D;&#x67E5;&#x627E;&#x6240;&#x6709;&#x652F;&#x6301;&#x4E86;Ispi&#x63A5;&#x53E3;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x6240;&#x6709;&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#x3002;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#x591A;&#x4E2A;&#x5B9E;&#x73B0;&#x7C7B;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x8FD9;&#x65F6;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x7684;&#x5065;&#x58EE;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x5199;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;SubstituteSpi.java:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.mythsman.test;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubstituteSpi</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Ispi</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">say</span><span class="hljs-params">()</span> </span>{
+        System.out.println(<span class="hljs-string">&quot;Well I&apos;m a backburner implement&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x80FD;&#x6210;&#x529F;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x8FD9;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x79CD;&#x6BD4;&#x8F83;&#x6E05;&#x695A;&#x7684;&#x670D;&#x52A1;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x4E86;&#x3002;</p>
 
                                 
                                 </section>
@@ -632,6 +703,10 @@
             
                 
                 
+                <a href="cp76bu.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Spring cron表达式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
             
         
     </div>
@@ -639,7 +714,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"常用框架的的使用和理解","level":"1.2","depth":1,"ref":"","articles":[{"title":"Slf4j的使用和理解","level":"1.2.1","depth":2,"path":"fnzky7.md","ref":"fnzky7.md","articles":[]},{"title":"ActiveMQ的使用和理解","level":"1.2.2","depth":2,"path":"sh1t61.md","ref":"sh1t61.md","articles":[]},{"title":"zookeeper的使用和理解","level":"1.2.3","depth":2,"path":"trguvm.md","ref":"trguvm.md","articles":[]},{"title":"Dubbo的使用和理解","level":"1.2.4","depth":2,"path":"zgz202.md","ref":"zgz202.md","articles":[]},{"title":"Nginx的使用和理解","level":"1.2.5","depth":2,"path":"neq0o5.md","ref":"neq0o5.md","articles":[]},{"title":"Redis的使用和理解","level":"1.2.6","depth":2,"path":"vlw7f5.md","ref":"vlw7f5.md","articles":[]},{"title":"Docker的使用和理解","level":"1.2.7","depth":2,"path":"vfe83l.md","ref":"vfe83l.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-08-02T13:33:24.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SPI概述","level":"1.3.1","depth":2,"next":{"title":"Spring cron表达式","level":"1.3.2","depth":2,"path":"cp76bu.md","ref":"cp76bu.md","articles":[]},"previous":{"title":"基本概念","level":"1.3","depth":1,"ref":"","articles":[{"title":"SPI概述","level":"1.3.1","depth":2,"path":"civ210.md","ref":"civ210.md","articles":[]},{"title":"Spring cron表达式","level":"1.3.2","depth":2,"path":"cp76bu.md","ref":"cp76bu.md","articles":[]},{"title":"Apache Shiro 入门","level":"1.3.3","depth":2,"path":"sp4tn3.md","ref":"sp4tn3.md","articles":[]},{"title":"ldap与权限控制入门","level":"1.3.4","depth":2,"path":"cicmow.md","ref":"cicmow.md","articles":[]},{"title":"分布式与集群的区别","level":"1.3.5","depth":2,"path":"zteqyw.md","ref":"zteqyw.md","articles":[]},{"title":"SpringAOP基本概念","level":"1.3.6","depth":2,"path":"kgrc32.md","ref":"kgrc32.md","articles":[]},{"title":"SSH和SSM框架对比","level":"1.3.7","depth":2,"path":"ywrkfn.md","ref":"ywrkfn.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"civ210.md","mtime":"2018-08-02T13:24:38.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

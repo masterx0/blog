@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Git 代码回滚 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,6 +58,8 @@
 
     
     
+    <link rel="prev" href="nqgeog.html" />
+    
 
     </head>
     <body>
@@ -85,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -358,7 +360,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="zgvpvp.html">
+        <li class="chapter active" data-level="1.4.3" data-path="zgvpvp.html">
             
                 <a href="zgvpvp.html">
             
@@ -587,7 +589,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Git 代码回滚</a>
     </h1>
 </div>
 
@@ -602,8 +604,49 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lark2gitbook">Lark2Gitbook</h1>
-<h2 id="&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;">&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;</h2>
+                                <h1 id="git-&#x4EE3;&#x7801;&#x56DE;&#x6EDA;">Git &#x4EE3;&#x7801;&#x56DE;&#x6EDA;</h1>
+<p><code>git reset</code>&#x3001;<code>git checkout</code> &#x548C; <code>git revert</code>&#x547D;&#x4EE4;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x6DF7;&#x6DC6;&#xFF0C;&#x4F46;&#x5F53;&#x4F60;&#x60F3;&#x8D77;&#x5B83;&#x4EEC;&#x5BF9;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3001;&#x7F13;&#x5B58;&#x533A;&#x548C;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x7684;&#x4E0D;&#x540C;&#x5F71;&#x54CD;&#xFF0C;&#x5C31;&#x4F1A;&#x5BB9;&#x6613;&#x5224;&#x65AD;&#x73B0;&#x5728;&#x5E94;&#x8BE5;&#x7528;&#x54EA;&#x4E2A;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x8868;&#x683C;&#x603B;&#x7ED3;&#x4E86;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x3002;&#x8BB0;&#x5F97;&#x7ECF;&#x5E38;&#x5BF9;&#x7167;&#x8FD9;&#x4E2A;&#x8868;&#x683C;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x4F7F;&#x7528; Git &#x65F6;&#x4E00;&#x5B9A;&#x4F1A;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x547D;&#x4EE4;</th>
+<th style="text-align:center">&#x4F5C;&#x7528;&#x57DF;</th>
+<th style="text-align:left">&#x5E38;&#x7528;&#x60C5;&#x666F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">git reset</td>
+<td style="text-align:center">&#x63D0;&#x4EA4;&#x5C42;&#x9762;</td>
+<td style="text-align:left">&#x5728;&#x79C1;&#x6709;&#x5206;&#x652F;&#x4E0A;&#x820D;&#x5F03;&#x4E00;&#x4E9B;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#x7684;&#x66F4;&#x6539;&#x7684;&#x7248;&#x672C;&#x5386;&#x53F2;&#xFF0C;&#x662F;&#x4F1A;&#x4FEE;&#x6539;&#x7248;&#x672C;&#x5386;&#x53F2;&#x7684;</td>
+</tr>
+<tr>
+<td style="text-align:center">git reset</td>
+<td style="text-align:center">&#x6587;&#x4EF6;&#x5C42;&#x9762;</td>
+<td style="text-align:left">&#x5C06;&#x6587;&#x4EF6;&#x4ECE;&#x7F13;&#x5B58;&#x533A;&#x4E2D;&#x79FB;&#x9664;</td>
+</tr>
+<tr>
+<td style="text-align:center">git checkout</td>
+<td style="text-align:center">&#x63D0;&#x4EA4;&#x5C42;&#x9762;</td>
+<td style="text-align:left">&#x5207;&#x6362;&#x5206;&#x652F;&#x6216;&#x67E5;&#x770B;&#x65E7;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:center">git checkout</td>
+<td style="text-align:center">&#x6587;&#x4EF6;&#x5C42;&#x9762;</td>
+<td style="text-align:left">&#x820D;&#x5F03;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x66F4;&#x6539;</td>
+</tr>
+<tr>
+<td style="text-align:center">git revert</td>
+<td style="text-align:center">&#x63D0;&#x4EA4;&#x5C42;&#x9762;</td>
+<td style="text-align:left">&#x5728;&#x516C;&#x5171;&#x5206;&#x652F;&#x4E0A;&#x66F4;&#x6539;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x5386;&#x53F2;commit&#x9006;&#x5411;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;commit&#xFF0C;&#x7248;&#x672C;&#x5386;&#x53F2;&#x662F;&#x4E0D;&#x4F1A;&#x88AB;&#x7834;&#x574F;&#x7684;</td>
+</tr>
+<tr>
+<td style="text-align:center">git revert</td>
+<td style="text-align:center">&#x6587;&#x4EF6;&#x5C42;&#x9762;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -631,6 +674,10 @@
 
             
                 
+                <a href="nqgeog.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Mysql 时间字段datetime和timestamp区别">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -639,7 +686,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"常用框架的的使用和理解","level":"1.2","depth":1,"ref":"","articles":[{"title":"Slf4j的使用和理解","level":"1.2.1","depth":2,"path":"fnzky7.md","ref":"fnzky7.md","articles":[]},{"title":"ActiveMQ的使用和理解","level":"1.2.2","depth":2,"path":"sh1t61.md","ref":"sh1t61.md","articles":[]},{"title":"zookeeper的使用和理解","level":"1.2.3","depth":2,"path":"trguvm.md","ref":"trguvm.md","articles":[]},{"title":"Dubbo的使用和理解","level":"1.2.4","depth":2,"path":"zgz202.md","ref":"zgz202.md","articles":[]},{"title":"Nginx的使用和理解","level":"1.2.5","depth":2,"path":"neq0o5.md","ref":"neq0o5.md","articles":[]},{"title":"Redis的使用和理解","level":"1.2.6","depth":2,"path":"vlw7f5.md","ref":"vlw7f5.md","articles":[]},{"title":"Docker的使用和理解","level":"1.2.7","depth":2,"path":"vfe83l.md","ref":"vfe83l.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-08-02T13:33:24.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git 代码回滚","level":"1.4.3","depth":2,"next":{"title":"Java8","level":"1.5","depth":1,"ref":"","articles":[{"title":"Java8之Lambda表达式","level":"1.5.1","depth":2,"path":"lg6kyi.md","ref":"lg6kyi.md","articles":[]},{"title":"Java8之流的使用和理解","level":"1.5.2","depth":2,"path":"sstgby.md","ref":"sstgby.md","articles":[]},{"title":"Java8之并行计算方案选择","level":"1.5.3","depth":2,"path":"ussgc8.md","ref":"ussgc8.md","articles":[]},{"title":"Java8之接口默认方法","level":"1.5.4","depth":2,"path":"ffwgpy.md","ref":"ffwgpy.md","articles":[]},{"title":"Java8之Optional类与NullPointerException","level":"1.5.5","depth":2,"path":"ptmfub.md","ref":"ptmfub.md","articles":[]},{"title":"MacOS编译JDK8","level":"1.5.6","depth":2,"path":"lhyelb.md","ref":"lhyelb.md","articles":[]}]},"previous":{"title":"Mysql 时间字段datetime和timestamp区别","level":"1.4.2","depth":2,"path":"nqgeog.md","ref":"nqgeog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zgvpvp.md","mtime":"2018-08-02T13:24:11.912Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

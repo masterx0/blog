@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>ldap与权限控制入门 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,6 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="zteqyw.html" />
+    
+    
+    <link rel="prev" href="sp4tn3.html" />
     
 
     </head>
@@ -85,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -261,7 +265,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="cicmow.html">
+        <li class="chapter active" data-level="1.3.4" data-path="cicmow.html">
             
                 <a href="cicmow.html">
             
@@ -587,7 +591,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >ldap与权限控制入门</a>
     </h1>
 </div>
 
@@ -602,8 +606,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lark2gitbook">Lark2Gitbook</h1>
-<h2 id="&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;">&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;</h2>
+                                <h1 id="ldap&#x4E0E;&#x6743;&#x9650;&#x63A7;&#x5236;&#x5165;&#x95E8;">ldap&#x4E0E;&#x6743;&#x9650;&#x63A7;&#x5236;&#x5165;&#x95E8;</h1>
+<h2 id="&#x57FA;&#x672C;&#x7ED3;&#x6784;"><a name="23clir"></a><strong>&#x57FA;&#x672C;&#x7ED3;&#x6784;</strong></h2>
+<p><img src="https://pic3.zhimg.com/80/v2-50c3969ab9c3793c3689903d5e41238c_hd.jpg" alt="image | left"></p>
+<p>&#xFFFC;
+      &#x4E0A;&#x56FE;&#x8868;&#x793A;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x9897; LDAP &#x76EE;&#x5F55;&#x6811;&#x3002;</p>
+<h2 id="&#x6761;&#x76EE;&#xFF08;entry&#xFF09;"><a name="gu7hab"></a><strong>&#x6761;&#x76EE;&#xFF08;Entry&#xFF09;</strong></h2>
+<p>&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x7684;&#x56FE;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x65B9;&#x6846;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x6709;&#x82E5;&#x5E72;&#x4E2A;&#x5C5E;&#x6027;&#x548C;&#x82E5;&#x5E72;&#x4E2A;&#x503C;&#x3002;&#x6709;&#x4E9B;&#x6761;&#x76EE;&#x8FD8;&#x80FD;&#x5305;&#x542B;&#x5B50;&#x6761;&#x76EE;&#x3002;</p>
+<h2 id="&#x8BC6;&#x522B;&#x540D;&#xFF08;distinguished-name-dn&#xFF09;"><a name="s1g2gl"></a><strong>&#x8BC6;&#x522B;&#x540D;&#xFF08;Distinguished Name, DN&#xFF09;</strong></h2>
+<p>&#x5B83;&#x8868;&#x793A;&#x6761;&#x76EE;&#x5728;&#x76EE;&#x5F55;&#x6811;&#x4E2D;&#x4ECE;&#x6839;&#x51FA;&#x53D1;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x662F;&#x6761;&#x76EE;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x8DDF; UNIX &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x505A;&#x7C7B;&#x6BD4;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x7684;&#x56FE;&#x4E2D;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x6761;&#x76EE;&#x7684; DN &#x662F; <code>cn=group1,dc=zenandidi,dc=com</code>&#x3002;</p>
+<h2 id="&#x76F8;&#x5BF9;&#x8BC6;&#x522B;&#x540D;&#xFF08;relative-distinguished-name-rdn&#xFF09;"><a name="e0xssi"></a><strong>&#x76F8;&#x5BF9;&#x8BC6;&#x522B;&#x540D;&#xFF08;Relative Distinguished Name, RDN&#xFF09;</strong></h2>
+<p>&#x76F8;&#x5BF9;&#x8BC6;&#x522B;&#x540D;&#x5C31;&#x662F;&#x8BC6;&#x522B;&#x540D;&#x7B2C;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x5DE6;&#x4FA7;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x8DDF; UNIX &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x540D;&#x505A;&#x7C7B;&#x6BD4;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x7684;&#x56FE;&#x4E2D;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x6761;&#x76EE;&#x7684; RDN &#x662F; <code>cn=group1</code>&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;RDN &#x4EE5; <code>dc=</code>&#x3001;<code>ou=</code>&#x3001;<code>c=</code>&#x3001;<code>o=</code> &#x5F00;&#x5934;&#x7684;&#x6761;&#x76EE;&#x4E3A;&#x5BB9;&#x5668;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5B50;&#x6761;&#x76EE;&#x3002;</p>
+<h2 id="&#x57FA;&#x51C6;&#x8BC6;&#x522B;&#x540D;&#xFF08;base-distinguished-name-base-dn&#xFF09;"><a name="2d9scg"></a><strong>&#x57FA;&#x51C6;&#x8BC6;&#x522B;&#x540D;&#xFF08;Base Distinguished Name, Base DN&#xFF09;</strong></h2>
+<p>&#x4E00;&#x822C;&#x6307;&#x6574;&#x4E2A;&#x76EE;&#x5F55;&#x6811;&#x7684;&#x6839;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x57FA;&#x672C;&#x7ED3;&#x6784;&#x7684;&#x56FE;&#x7684; Base DN &#x662F; <code>dc=zenandidi,dc=com</code>&#x3002;</p>
+<h2 id="&#x6A21;&#x5F0F;&#xFF08;schema&#xFF09;"><a name="gsu2iw"></a><strong>&#x6A21;&#x5F0F;&#xFF08;Schema&#xFF09;</strong></h2>
+<p>&#x6A21;&#x5F0F;&#x662F;&#x5BF9;&#x8C61;&#x7C7B;&#xFF08;ObjectClass&#xFF09;&#x3001;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#xFF08;AttributeType&#xFF09;&#x3001;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF08;Syntax&#xFF09;&#x548C;&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF08;MatchingRules&#xFF09;&#x7684;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x8DDF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;&#x505A;&#x7C7B;&#x6BD4;&#x3002;</p>
+<p>LDAP &#x534F;&#x8BAE;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x6807;&#x51C6;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5373;&#x53EF;&#x3002;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x81EA;&#x884C;&#x5B9A;&#x4E49;&#x6A21;&#x5F0F;&#x3002;</p>
+<h2 id="&#x5BF9;&#x8C61;&#x7C7B;&#xFF08;objectclass&#xFF09;"><a name="mhgstl"></a><strong>&#x5BF9;&#x8C61;&#x7C7B;&#xFF08;ObjectClass&#xFF09;</strong></h2>
+<p>&#x5B66;&#x8FC7;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x7684;&#x4EBA;&#x90FD;&#x77E5;&#x9053;&#xFF0C;&#x7C7B;&#x662F;&#x5C5E;&#x6027;&#x7684;&#x5C01;&#x88C5;&#x3002;</p>
+<p>&#x5BF9;&#x8C61;&#x7C7B;&#x5C01;&#x88C5;&#x4E86;&#x5FC5;&#x9009;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x53EF;&#x9009;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x5BF9;&#x8C61;&#x7C7B;&#x4E5F;&#x662F;&#x652F;&#x6301;&#x7EE7;&#x627F;&#x7684;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x5BF9;&#x8C61;&#x7C7B;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x6307;&#x5B9A;&#x6761;&#x76EE;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x7C7B;&#x3002;</p>
+<p>&#x5BF9;&#x8C61;&#x7C7B;&#x53C8;&#x5206;&#x4E3A;&#x4E86;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#xFF08;Structural&#xFF09;&#x3001;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#xFF08;Abstract&#xFF09;&#x3001;&#x8F85;&#x52A9;&#x7C7B;&#x578B;&#xFF08;Auxiliary&#xFF09;&#x8FD9;&#x4E09;&#x7C7B;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7C7B;&#x6240;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p><img src="https://pic1.zhimg.com/80/v2-3dfd7924b7f8b1ea40dd0032910e49d5_hd.jpg" alt="image | left"></p>
+<p>&#xFFFC;</p>
+<h2 id="&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#xFF08;attributetype&#xFF09;"><a name="phrvig"></a><strong>&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#xFF08;AttributeType&#xFF09;</strong></h2>
+<p>&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x4E86;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#xFF08;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x540C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x76F8;&#x4E92;&#x6BD4;&#x8F83;&#x7684;&#x89C4;&#x5219;&#x7B49;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p><img src="https://pic3.zhimg.com/80/v2-a1c15617cecfad21d02eae15d9243e59_hd.jpg" alt="image | left"></p>
+<p>&#xFFFC;</p>
+<h2 id="&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF08;syntax&#xFF09;"><a name="99rahw"></a><strong>&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF08;Syntax&#xFF09;</strong></h2>
+<p>&#x4E0B;&#x56FE;&#x662F; LDAP &#x534F;&#x8BAE;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF0C;&#x4F8B;&#x5982;&#x4E8C;&#x8FDB;&#x5236;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x7C7B;&#x578B;&#x7B49;&#x3002;</p>
+<p><img src="https://pic3.zhimg.com/80/v2-0c12efbf5997d694f66cf8c509866634_hd.jpg" alt="image | left"></p>
+<p>&#xFFFC;</p>
+<h2 id="&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF08;matchingrule&#xFF09;"><a name="oswnpo"></a><strong>&#x5339;&#x914D;&#x89C4;&#x5219;&#xFF08;MatchingRule&#xFF09;</strong></h2>
+<p>&#x8FD9;&#x4E2A;&#x6211;&#x628A;&#x5B83;&#x7406;&#x89E3;&#x4E3A;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x5C5E;&#x6027;&#x7684;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x662F; LDAP &#x534F;&#x8BAE;&#x9884;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x5339;&#x914D;&#x89C4;&#x5219;&#x3002;</p>
+<p>&#xFFFC;</p>
+<p><img src="https://pic4.zhimg.com/80/v2-c668ca67f4dd0539283db8c8d6aa3d14_hd.jpg" alt="image | left"></p>
+<h2 id="ldif&#xFF08;ldap-data-interchange-format&#xFF09;-&#x6587;&#x4EF6;"><a name="msb1ex"></a><strong>LDIF&#xFF08;LDAP Data Interchange Format&#xFF09; &#x6587;&#x4EF6;</strong></h2>
+<p>LDAP &#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x4EE5;&#x6587;&#x672C;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x90FD;&#x9700;&#x8981;&#x901A;&#x8FC7; LDIF &#x6587;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x8DDF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684; SQL &#x6587;&#x4EF6;&#x505A;&#x7C7B;&#x6BD4;&#x3002;</p>
+<p>LDIF &#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x4E00;&#x822C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-plain">dn: &lt;&#x8BC6;&#x522B;&#x540D;&gt;
+&lt;&#x5C5E;&#x6027; 1&gt;: &lt;&#x503C; 1&gt;
+&lt;&#x5C5E;&#x6027; 2&gt;: &lt;&#x503C; 2&gt;
+...
+</code></pre>
 
                                 
                                 </section>
@@ -631,6 +689,14 @@
 
             
                 
+                <a href="sp4tn3.html" class="navigation navigation-prev " aria-label="Previous page: Apache Shiro 入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="zteqyw.html" class="navigation navigation-next " aria-label="Next page: 分布式与集群的区别">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -639,7 +705,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"常用框架的的使用和理解","level":"1.2","depth":1,"ref":"","articles":[{"title":"Slf4j的使用和理解","level":"1.2.1","depth":2,"path":"fnzky7.md","ref":"fnzky7.md","articles":[]},{"title":"ActiveMQ的使用和理解","level":"1.2.2","depth":2,"path":"sh1t61.md","ref":"sh1t61.md","articles":[]},{"title":"zookeeper的使用和理解","level":"1.2.3","depth":2,"path":"trguvm.md","ref":"trguvm.md","articles":[]},{"title":"Dubbo的使用和理解","level":"1.2.4","depth":2,"path":"zgz202.md","ref":"zgz202.md","articles":[]},{"title":"Nginx的使用和理解","level":"1.2.5","depth":2,"path":"neq0o5.md","ref":"neq0o5.md","articles":[]},{"title":"Redis的使用和理解","level":"1.2.6","depth":2,"path":"vlw7f5.md","ref":"vlw7f5.md","articles":[]},{"title":"Docker的使用和理解","level":"1.2.7","depth":2,"path":"vfe83l.md","ref":"vfe83l.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-08-02T13:33:24.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ldap与权限控制入门","level":"1.3.4","depth":2,"next":{"title":"分布式与集群的区别","level":"1.3.5","depth":2,"path":"zteqyw.md","ref":"zteqyw.md","articles":[]},"previous":{"title":"Apache Shiro 入门","level":"1.3.3","depth":2,"path":"sp4tn3.md","ref":"sp4tn3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cicmow.md","mtime":"2018-08-02T13:24:38.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

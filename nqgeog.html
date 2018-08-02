@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Mysql 时间字段datetime和timestamp区别 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,6 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="zgvpvp.html" />
+    
+    
+    <link rel="prev" href="chvte7.html" />
     
 
     </head>
@@ -85,7 +89,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -345,7 +349,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="nqgeog.html">
+        <li class="chapter active" data-level="1.4.2" data-path="nqgeog.html">
             
                 <a href="nqgeog.html">
             
@@ -587,7 +591,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Mysql 时间字段datetime和timestamp区别</a>
     </h1>
 </div>
 
@@ -602,8 +606,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lark2gitbook">Lark2Gitbook</h1>
-<h2 id="&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;">&#x963F;&#x91CC;&#x4E91;&#x5B9E;&#x4E60;&#x603B;&#x7ED3;</h2>
+                                <h1 id="mysql-&#x65F6;&#x95F4;&#x5B57;&#x6BB5;datetime&#x548C;timestamp&#x533A;&#x522B;">Mysql &#x65F6;&#x95F4;&#x5B57;&#x6BB5;datetime&#x548C;timestamp&#x533A;&#x522B;</h1>
+<p>&#x4E24;&#x8005;&#x90FD;&#x662F;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#xFF0C;&#x683C;&#x5F0F;&#x90FD;&#x4E00;&#x81F4;&#x4E3A;YYYY-MM-DD HH:MM:SS&#x3002;&#x4E24;&#x8005;&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x56DB;&#x70B9;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x6700;&#x4E3B;&#x8981;&#x7684;&#x533A;&#x522B;-&#x53D7;&#x65F6;&#x533A;&#x5F71;&#x54CD;&#x4E0D;&#x540C;&#x3002;<code>timestamp</code>&#x4F1A;&#x8DDF;&#x968F;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x533A;&#x53D8;&#x5316;&#x800C;&#x53D8;&#x5316;&#xFF0C;&#x800C;<code>datetime</code>&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x7EDD;&#x5BF9;&#x503C;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;&#x3002;
+  &#x4E00;&#x4E2A;<code>timestamp</code>&#x5B57;&#x6BB5;&#xFF0C;&#x4E00;&#x4E2A;<code>datetime</code>&#x5B57;&#x6BB5;&#xFF0C;&#x4FEE;&#x6539;&#x65F6;&#x533A;<code>SET TIME_ZONE = &quot;america/new_york&quot;;</code>&#x540E;&#xFF0C;<code>timestamp</code>&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x53D8;&#x4E86;! 
+  <strong>&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x5E94;&#x7528;&#x573A;&#x666F;&#x6709;&#x8DE8;&#x65F6;&#x533A;&#x8981;&#x6C42;&#x7684;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x8FD9;&#x70B9;&#x3002;</strong></li>
+<li>&#x5360;&#x7528;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x4E0D;&#x540C;&#x3002;<code>timestamp</code>&#x50A8;&#x5B58;&#x5360;&#x7528;4&#x4E2A;&#x5B57;&#x8282;&#xFF0C;<code>datetime</code>&#x50A8;&#x5B58;&#x5360;&#x7528;8&#x4E2A;&#x5B57;&#x8282;</li>
+<li>&#x53EF;&#x8868;&#x793A;&#x7684;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x4E0D;&#x540C;&#x3002;<code>timestamp</code>&#x53EF;&#x8868;&#x793A;&#x8303;&#x56F4;:<code>1970-01-01 00:00:00</code>~<code>2038-01-09 03:14:07</code>&#xFF0C;<code>datetime</code>&#x652F;&#x6301;&#x7684;&#x8303;&#x56F4;&#x66F4;&#x5BBD;<code>1000-01-01 00:00:00</code> ~ <code>9999-12-31 23:59:59</code></li>
+<li>&#x7D22;&#x5F15;&#x901F;&#x5EA6;&#x4E0D;&#x540C;&#x3002;<code>timestamp</code>&#x66F4;&#x8F7B;&#x91CF;&#xFF0C;&#x7D22;&#x5F15;&#x76F8;&#x5BF9;<code>datetime</code>&#x66F4;&#x5FEB;&#x3002;</li>
+</ul>
 
                                 
                                 </section>
@@ -631,6 +643,14 @@
 
             
                 
+                <a href="chvte7.html" class="navigation navigation-prev " aria-label="Previous page: linux基础笔记">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="zgvpvp.html" class="navigation navigation-next " aria-label="Next page: Git 代码回滚">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -639,7 +659,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"常用框架的的使用和理解","level":"1.2","depth":1,"ref":"","articles":[{"title":"Slf4j的使用和理解","level":"1.2.1","depth":2,"path":"fnzky7.md","ref":"fnzky7.md","articles":[]},{"title":"ActiveMQ的使用和理解","level":"1.2.2","depth":2,"path":"sh1t61.md","ref":"sh1t61.md","articles":[]},{"title":"zookeeper的使用和理解","level":"1.2.3","depth":2,"path":"trguvm.md","ref":"trguvm.md","articles":[]},{"title":"Dubbo的使用和理解","level":"1.2.4","depth":2,"path":"zgz202.md","ref":"zgz202.md","articles":[]},{"title":"Nginx的使用和理解","level":"1.2.5","depth":2,"path":"neq0o5.md","ref":"neq0o5.md","articles":[]},{"title":"Redis的使用和理解","level":"1.2.6","depth":2,"path":"vlw7f5.md","ref":"vlw7f5.md","articles":[]},{"title":"Docker的使用和理解","level":"1.2.7","depth":2,"path":"vfe83l.md","ref":"vfe83l.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-08-02T13:33:24.184Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mysql 时间字段datetime和timestamp区别","level":"1.4.2","depth":2,"next":{"title":"Git 代码回滚","level":"1.4.3","depth":2,"path":"zgvpvp.md","ref":"zgvpvp.md","articles":[]},"previous":{"title":"linux基础笔记","level":"1.4.1","depth":2,"path":"chvte7.md","ref":"chvte7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"nqgeog.md","mtime":"2018-08-02T13:24:12.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-02T13:33:46.039Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
