@@ -1,12 +1,12 @@
 # Nginx的使用和理解
 
-# <a name="kd9zhk"></a>一、Nginx介绍
+# 一、Nginx介绍
 
-## <a name="gqg3gw"></a>1 概述
+## 1 概述
 
 ​	Nginx是一款轻量级的web服务器、反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like写一下发行。有俄罗斯的程序设计师Igor Saysoev所开发，供俄罗斯大型的入口网站及搜索引擎Rambler使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、新浪、网易、腾讯等。
 
-## <a name="73m9kf"></a>2 负载均衡策略
+## 2 负载均衡策略
 
 * 使用硬件负责均衡策略实现，如时候用F5、A10等负载均衡器，价格昂贵，投资大。
 * 使用软件进行负载均衡
@@ -14,15 +14,15 @@
     * 使用我们今天所学习的Nginx+KeepAlived
     * 其他软件负载均衡，如LVS、haproxy等
 
-## <a name="t64ogx"></a>3 Nginx的优点
+## 3 Nginx的优点
 
 * Nginx 可以在大多数 UnixLinux OS 上编译运行，并有 Windows 移植版。 Nginx 的1.4.0稳定版已经于2013年4月24日发布，一般情况下，对于新建站点，建议使用最新稳定版作为生产版本，已有站点的升级急迫性不高。Nginx 的源代码使用 2-clause BSD-like license。
 * Nginx 是一个很强大的高性能Web和反向代理服务器，它具有很多非常优越的特性。
 * 在连接高并发的情况下，Nginx是Apache服务器不错的替代品：Nginx在美国是做虚拟主机生意的老板们经常选择的软件平台之一。能够支持高达 50,000 个并发连接数的响应，感谢Nginx为我们选择了 epoll and kqueue作为开发模型。
 
-# <a name="ehbtly"></a>二、Nginx环境搭建和使用
+# 二、Nginx环境搭建和使用
 
-## <a name="d45ses"></a>1 环境搭建
+## 1 环境搭建
 
 （1）下载
 
@@ -81,11 +81,11 @@ drwxr-xr-x 2 root root 4096 10月 24 14:15 sbin
 
 ​	若启动失败，请查看80端口是否被占用 lsof -i :80
 
-## <a name="7go9ny"></a>2 Nginx配置文件
+## 2 Nginx配置文件
 
 参考文档：[http://blog.csdn.net/tjcyjd/article/details/50695922](http://blog.csdn.net/tjcyjd/article/details/50695922)
 
-### <a name="2ggslo"></a>2.1Nginx配置文件：
+### 2.1Nginx配置文件：
 
 ```
 [root@localhost conf]# cd /usr/local/nginx/conf
@@ -153,13 +153,13 @@ location ~ pattern {} 正则匹配
 
 想请教见参考文档：《nginx配置文件说明.conf》
 
-## <a name="gr1glp"></a>3 Nginx反向代理与负载均衡
+## 3 Nginx反向代理与负载均衡
 
 ​	Nginx反向代理proxy与负载均衡upstream
 
 ​	官方配置：[http://nginx.org/en/docs](http://nginx.org/en/docs)
 
-### <a name="h0hrlm"></a>3.1 配置反向代理
+### 3.1 配置反向代理
 
 ​	proxy：proxy\_pass  url地址
 
@@ -225,7 +225,7 @@ nginx server ip : <%=request.getRemoteAddr()%>
 
 ​	至此，就实现了通过144的nginx代理145的tomcat。浏览器所在地址为211。
 
-### <a name="snmrrh"></a>3.2  配置负载均衡
+### 3.2  配置负载均衡
 
 ​	upstream : upstream
 

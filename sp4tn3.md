@@ -1,6 +1,6 @@
 # Apache Shiro 入门
 
-<span data-type="color" style="color:rgb(0, 0, 0)"><span data-type="background" style="background-color:rgb(255, 255, 255)">Shiro可以帮助我们完成：认证、授权、加密、会话管理、与Web集成、缓存等。</span></span>
+Shiro可以帮助我们完成：认证、授权、加密、会话管理、与Web集成、缓存等。
 ![image.png | left | 414x224](https://cdn.yuque.com/yuque/0/2018/png/130140/1528939237330-9fea5021-d46b-42f1-8133-4132c9d73d67.png "") 
 可以看到：应用代码直接交互的对象是Subject，也就是说Shiro的对外API核心就是Subject；其每个API的含义：
 __Subject：__主体，代表了当前“用户”，这个用户不一定是一个具体的人，与当前应用交互的任何东西都是Subject，如网络爬虫，机器人等；即一个抽象概念；所有Subject都绑定到SecurityManager，与Subject的所有交互都会委托给SecurityManager；可以把Subject认为是一个门面；SecurityManager才是实际的执行者；
