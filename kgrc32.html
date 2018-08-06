@@ -633,22 +633,38 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="springaop&#x57FA;&#x672C;&#x6982;&#x5FF5;">SpringAOP&#x57FA;&#x672C;&#x6982;&#x5FF5;</h1>
-<p>join point &#x8FDE;&#x63A5;&#x70B9;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;sql&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</p>
-<p>point cut &#x5207;&#x70B9; &#xFF0C;&#x76F8;&#x5F53;&#x4E8E;sql&#x4E2D;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</p>
-<p>advice &#x589E;&#x5F3A; &#xFF0C; &#x7EC7;&#x5165;&#x7684;&#x529F;&#x80FD;</p>
-<p>{</p>
-<p>1&#xFF0C;method before advice &#x524D;&#x7F6E;&#x589E;&#x5F3A;</p>
-<p>2&#xFF0C;after returning advice &#x540E;&#x7F6E;&#x589E;&#x5F3A;</p>
-<p>3&#xFF0C;method interceptor &#x73AF;&#x7ED5;&#x589E;&#x5F3A;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x65B9;&#x6CD5;&#x62E6;&#x622A;&#x5668;&#xFF09;</p>
-<p>4&#xFF0C;throws advice &#x5F02;&#x5E38;&#x6355;&#x83B7;&#x589E;&#x5F3A;</p>
-<p>}</p>
-<p>target &#x76EE;&#x6807;&#x5BF9;&#x8C61; &#xFF0C;advice&#x7EC7;&#x5165;&#x7684;&#x5BF9;&#x8C61;</p>
-<p>introduction &#x5F15;&#x4ECB;</p>
-<p>weaving &#x7EC7;&#x5165;</p>
-<p>proxy &#x4EE3;&#x7406;</p>
-<p>aspect &#x5207;&#x9762; </p>
-<p>&#x4F7F;&#x7528;Aspectj&#x6CE8;&#x89E3;&#x65F6;pointcut&#x65B9;&#x6CD5;&#x6CE8;&#x89E3;&#x4E0A;&#x7684;execution( * com.test.service.impl.. * . * (..))&#x53C2;&#x6570;&#x89E3;&#x91CA;&#xFF1A;
-<span data-type="color" style="color:rgb(36, 41, 46)"><span data-type="background" style="background-color:rgb(255, 255, 255)">&#x7B2C;&#x4E00;&#x4E2A; <em> &#x4EE3;&#x8868;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;..&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x5305;&#x548C;&#x5B50;&#x5305;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E09;&#x4E2A; </em> &#x5206;&#x522B;&#x4EE3;&#x8868;&#x6240;&#x6709;&#x7C7B;&#x548C;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;..&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x53C2;&#x6570;</span>&lt;/span&gt;</span></p>
+<ul>
+<li><p>join point &#x8FDE;&#x63A5;&#x70B9;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;sql&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x8BB0;&#x5F55;</p>
+</li>
+<li><p>point cut &#x5207;&#x70B9; &#xFF0C;&#x76F8;&#x5F53;&#x4E8E;sql&#x4E2D;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</p>
+</li>
+<li><p>advice &#x589E;&#x5F3A; &#xFF0C; &#x7EC7;&#x5165;&#x7684;&#x529F;&#x80FD;</p>
+<ul>
+<li>method before advice &#x524D;&#x7F6E;&#x589E;&#x5F3A;</li>
+<li>after returning advice &#x540E;&#x7F6E;&#x589E;&#x5F3A;</li>
+<li>method interceptor &#x73AF;&#x7ED5;&#x589E;&#x5F3A;&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x65B9;&#x6CD5;&#x62E6;&#x622A;&#x5668;&#xFF09;</li>
+<li>throws advice &#x5F02;&#x5E38;&#x6355;&#x83B7;&#x589E;&#x5F3A;</li>
+</ul>
+</li>
+<li><p>target &#x76EE;&#x6807;&#x5BF9;&#x8C61; &#xFF0C;advice&#x7EC7;&#x5165;&#x7684;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>introduction &#x5F15;&#x4ECB;</p>
+</li>
+<li><p>weaving &#x7EC7;&#x5165;</p>
+</li>
+<li><p>proxy &#x4EE3;&#x7406;</p>
+</li>
+<li><p>aspect &#x5207;&#x9762; </p>
+<pre><code class="lang-java">&#x4F7F;&#x7528;Aspectj&#x6CE8;&#x89E3;&#x65F6;pointcut&#x65B9;&#x6CD5;&#x6CE8;&#x89E3;&#x4E0A;&#x7684;
+execution( * com.test.service.impl.. * . * (..))&#x53C2;&#x6570;&#x89E3;&#x91CA;&#xFF1A;
+
+&#x7B2C;&#x4E00;&#x4E2A; * &#x4EE3;&#x8868;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;;
+&#x7B2C;&#x4E00;&#x4E2A;..&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x5305;&#x548C;&#x5B50;&#x5305;;
+&#x7B2C;&#x4E8C;&#x4E09;&#x4E2A; * &#x5206;&#x522B;&#x4EE3;&#x8868;&#x6240;&#x6709;&#x7C7B;&#x548C;&#x6240;&#x6709;&#x65B9;&#x6CD5;;
+&#x7B2C;&#x4E8C;&#x4E2A;..&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x53C2;&#x6570;
+</code></pre>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -692,7 +708,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SpringAOP基本概念","level":"1.3.6","depth":2,"next":{"title":"SSH和SSM框架对比","level":"1.3.7","depth":2,"path":"ywrkfn.md","ref":"ywrkfn.md","articles":[]},"previous":{"title":"分布式与集群的区别","level":"1.3.5","depth":2,"path":"zteqyw.md","ref":"zteqyw.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kgrc32.md","mtime":"2018-08-03T01:12:32.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-03T09:02:30.997Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SpringAOP基本概念","level":"1.3.6","depth":2,"next":{"title":"SSH和SSM框架对比","level":"1.3.7","depth":2,"path":"ywrkfn.md","ref":"ywrkfn.md","articles":[]},"previous":{"title":"分布式与集群的区别","level":"1.3.5","depth":2,"path":"zteqyw.md","ref":"zteqyw.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"kgrc32.md","mtime":"2018-08-06T05:39:28.281Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-06T05:41:42.940Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
