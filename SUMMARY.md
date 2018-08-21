@@ -14,6 +14,7 @@
   - [分布式与集群的区别](zteqyw.md)
   - [SpringAOP基本概念](kgrc32.md)
   - [SSH和SSM框架对比](ywrkfn.md)
+  - [Redis缓存失效](RedisInvalidateCache.md)
 - [linux]()
   - [linux基础笔记](chvte7.md)
   - [Mysql 时间字段datetime和timestamp区别](nqgeog.md)
@@ -28,9 +29,17 @@
   - [MacOS编译JDK8](lhyelb.md)
 - [basic]()
   - [The Logging API](xikxxx.md)
+
   - [Java存储位置总结](ipxcg6.md)
+
   - [Java多线程基础详解](yqgcw4.md)
+
   - [BIO与NIO、AIO的区别](tsimzi.md)
+
   - [RESTFul 服务安全性和幂等性](buolzh.md)
+
   - [FastJson基础](FastJson.md)
 
+  - [synchronized基础](synchronized.md)
+
+    
