@@ -124,8 +124,8 @@ comment:
     owner: masterx0 #必须. GitHub repository 所有者，可以是个人或者组织。
     admin: masterx0 #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
     repo: masterx0.github.io #必须. GitHub repository.
-    ClientID:  848be8d99fb0b60f5953 #必须. GitHub Application Client ID.
-    ClientSecret: 13810da88d23b7a304d7f6cb9315fdbea8c0cffd #必须. GitHub Application Client Secret.
+    ClientID:  885540b3d865a2664a1a #必须. GitHub Application Client ID.
+    ClientSecret: c2bcf416e8e0be6c10199eff969b8a1ae45a2965 #必须. GitHub Application Client Secret.
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
